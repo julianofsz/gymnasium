@@ -1,0 +1,282 @@
+﻿@{
+    ViewData["Title"] = "Gymnasium";
+}
+
+  <section class="container-fluid hero-section">
+        <div class="row no-gutters">
+            <div class="col-12 col-lg-5 p-5 d-flex align-items-center justify-content-center coluna-text">
+                <div class="text-content">
+                    <h2 class="text-black fw-bold">CONSTRUA SEU CORPO <br> TRANSFORME SUA <span class="highlight">VIDA</span></h2>
+                    <p>Experimente uma transformação completa: treine com intensidade, construa um corpo forte e alcance uma vida cheia de energia e bem-estar.</p>
+                    <a href="#" class="btn btn-estilo-bg">SAIBA MAIS</a>
+                </div>
+            </div>
+            <div class="col-lg-7 image-column d-none d-lg-block position">
+                <div class="image-container">
+                    <img src="/img/bgImage.png" class="img-fluid" alt="Imagem ilustrativa" />
+                </div>
+                <div class="clip-background"></div>
+                <div class="vertical-text">
+                    <p>JORNADA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row" style="height: 500px;">
+            <div class="col-lg-7 col-12 d-flex flex-column align-self-center">
+                <h3 class="text-black text fw-bold">SOBRE NÓS</h3>
+                <p class="sobre-p">Aqui na Gymnasium, sua saúde e bem-estar são nossa prioridade. Oferecemos instalações modernas e uma equipe dedicada para apoiar sua jornada fitness. Com uma variedade de atividades para todos os níveis, garantimos um ambiente motivador. Venha se juntar a nós e descubra seu potencial!</p>
+            </div>
+            <div class="col-lg-5 col-12 py-5 mobile-img relative">
+                <img src="/img/sobregym.png" class="img-fluid rounded absolute img-1" alt="Imagem da Academia">
+                <img src="/img/sobregym2.png" class="img-fluid rounded absolute img-2" alt="Imagem da Academia">
+            </div>
+        </div>
+    </main>
+
+
+<section class="container distancia-elemento g-0">
+    <div class="row mb-5 text-center">
+      <h2>MELHORES PLANOS DE TREINOS</h2>
+      <p class="mx-auto w-50">
+        Tenha acesso aos melhores planos de treino, seja ele de força, hipertrofia, resistência, etc.
+        Tudo é montado pensando no objetivo dos nossos alunos.
+      </p>
+    </div>
+  <div class="row g-0 justify-content-center">
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 ">
+      <div class="card card-bg-padrao card-shadow text-dark" style="width: 20rem; height: ;">
+        <div class="card-body">
+          <i class="bi bi-person-fill-add fs-2"></i>
+          <h5 class="card-title text-dark">Treino de Força</h5>
+          <div class="row">
+            <p class="col-10 card-text small text-muted">
+              O treino de força aumenta a massa muscular, melhora a força, densidade óssea e equilíbrio.
+            </p>
+            <a href="#" class="col-2 border border-secondary icon-position"><i class="bi bi-arrow-down-right text-dark"></i></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4 ">
+      <div class="card card-bg-padrao card-shadow text-dark" style="width: 20rem;">
+        <div class="card-body">
+          <i class="bi bi-person-fill-add fs-2"></i>
+          <h5 class="card-title">Treino de Hipertrofia</h5>
+          <div class="row">
+            <p class="col-10 card-text small text-muted">
+              O treino de hipertrofia aumenta massa muscular, acelera metabolismo, fortalece articulações.
+            </p>
+            <a href="#" class="col-2 border border-secondary icon-position"><i class="bi bi-arrow-down-right text-dark"></i></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="card card-bg-padrao card-shadow text-dark" style="width: 20rem;">
+        <div class="card-body">
+          <i class="bi bi-person-fill-add fs-2"></i>
+          <h5 class="card-title">Treino de Resistência</h5>
+          <div class="row">
+            <p class="col-10 card-text small text-muted">
+              O treino de resistência melhora a saúde cardiovascular, aumenta a força e promove resistência física.
+            </p>
+            <a href="#" class="col-2 border border-secondary icon-position"><i class="bi bi-arrow-down-right text-dark"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid progamas mt-5 py-5">
+  <div class="container relative p-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="text-card-after">Nossos Programas</h2>
+      <div class="btn-display">
+        <button class="carousel-control-prev btn-custom-prev p-1" type="button" id="prevButton">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next btn-custom-next p-1" type="button" id="nextButton">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="cardCarousel" class="carousel">
+      <div class="carousel-inner" id="cardRow">
+        <!-- Cards alinhados horizontalmente -->
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas1.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">MUSCULAÇÃO</h5>
+              <p class="card-text text-muted">Área para treino de musculação com equipamentos de primeira linha.</p>
+              <a href="#" class="btn btn-card-custom">TER & QUIN 19Hrs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas2.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">MUAY THAI</h5>
+              <p class="card-text text-muted">Aprenda o Muay Thai.</p>
+              <a href="#" class="btn btn-card-custom">Qua & Sab 19Hrs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas3.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">Cardio</h5>
+              <p class="card-text text-muted">Faça seu cárdio para queimar caloriascom nossos equipamentos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas1.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">MUSCULAÇÃO</h5>
+              <p class="card-text text-muted">Área para treino de musculação com equipamentos de primeira linha.</p>
+              <a href="#" class="btn btn-card-custom">TER & QUIN 19Hrs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas2.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">MUSCULAÇÃO</h5>
+              <p class="card-text text-muted">Área para treino de musculação com equipamentos de primeira linha.</p>
+              <a href="#" class="btn btn-card-custom">TER & QUIN 19Hrs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="/img/progamas3.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body text-center relative pt-5">
+              <span class="card-custom absolute"></span>
+              <h5 class="card-title fs-4">MUSCULAÇÃO</h5>
+              <p class="card-text text-muted">Área para treino de musculação com equipamentos de primeira linha.</p>
+              <a href="#" class="btn btn-card-custom">TER & QUIN 19Hrs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="divisor-section container-fluid mt-5"></div>
+
+
+<section class="container-fluid progamas mt-5 py-5">
+  <div class="container relative p-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="text-card-after">Nossos PLANOS</h2>
+      <div class="btn-display">
+          <button class="scroll-btn left-btn carousel-control-prev-icon"></button>
+          <button class="scroll-btn right-btn carousel-control-next-icon"></button>
+      </div>
+    </div>
+
+    <div class="assinaturas-content">
+
+      <div class="card bg-light assinatura-card" style="width: 21.5rem; height: 28rem;">
+        <div class="card-body">
+          <h6 class="card-title">Mensal</h6>
+          <div class="plano-valor">
+            <h4 class="">R$89,90</h4>
+            <span>/mês</span>
+          </div>
+          <p class="card-text">A budget-friendly option for individuals and small businesses.</p>
+          <a href="#" class="btn btn-estilo-bg d-flex justify-content-center">Assine Agora</a>
+          <div class="beneficios">
+            <span class="text-muted">Beneficios</span>
+            <ul class="list-unstyled relative assinatura-ul">
+              <li class="assinatura assinatura-black">Acesso a toda a área de musculação</li>
+              <li class="assinatura assinatura-black">Acesso aos equipamentos de cárdio</li>
+              <li class="assinatura assinatura-black">Auxílio na execuçao de exercícios</li>
+              <li class="assinatura assinatura-black">Treinos completos na plataforma</li>
+              <li class="assinatura assinatura-amarelo">Renovação mensal</li>
+              <li class="assinatura assinatura-vermelho">Advanced security features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+      <div class="card bg-light assinatura-card" style="width: 23rem; height: 31rem;">
+        <div class="card-body">
+          <span class="btn-oferta">Melhor Oferta</span>
+          <h6 class="card-title mt-4">Trimestral</h6>
+          <div class="plano-valor">
+            <h4 class="">R$89,90</h4>
+            <span>/mês</span>
+          </div>
+          <p class="card-text">A budget-friendly option for individuals and small businesses.</p>
+          <a href="#" class="btn btn-estilo-bg d-flex justify-content-center">Assine Agora</a>
+          <div class="beneficios">
+            <span class="text-muted">Beneficios</span>
+            <ul class="list-unstyled relative assinatura-ul">
+              <li class="assinatura assinatura-black">Acesso a toda a área de musculação</li>
+              <li class="assinatura assinatura-black">Acesso aos equipamentos de cárdio</li>
+              <li class="assinatura assinatura-black">Auxílio na execuçao de exercícios</li>
+              <li class="assinatura assinatura-black">Treinos completos na plataforma</li>
+              <li class="assinatura assinatura-amarelo">Renovação mensal</li>
+              <li class="assinatura assinatura-vermelho">Advanced security features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-light assinatura-card" style="width: 21.5rem; height: 28rem;">
+        <div class="card-body">
+          <h6 class="card-title">Anual</h6>
+          <div class="plano-valor">
+            <h4 class="">R$89,90</h4>
+            <span>/mês</span>
+          </div>
+          <p class="card-text">A budget-friendly option for individuals and small businesses.</p>
+          <a href="#" class="btn btn-estilo-bg d-flex justify-content-center">Assine Agora</a>
+          <div class="beneficios">
+            <span class="text-muted">Beneficios</span>
+            <ul class="list-unstyled relative assinatura-ul">
+              <li class="assinatura assinatura-black">Acesso a toda a área de musculação</li>
+              <li class="assinatura assinatura-black">Acesso aos equipamentos de cárdio</li>
+              <li class="assinatura assinatura-black">Auxílio na execuçao de exercícios</li>
+              <li class="assinatura assinatura-black">Treinos completos na plataforma</li>
+              <li class="assinatura assinatura-amarelo">Renovação mensal</li>
+              <li class="assinatura assinatura-vermelho">Advanced security features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    </div>
+</section>

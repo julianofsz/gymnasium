@@ -1,0 +1,37 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="container-fluid padrao d-flex align-items-center justify-content-center">
+    <h4 class="titulo-form">Bem-vindo(a) de volta!</h4>
+
+    <!-- Formulário de Login -->
+    <form asp-action="Login" method="post" id="form-login" class="form-auth">
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+        <div class="mb-1">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" type="email" class="form-control" placeholder="Digite seu email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Senha</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Digite sua senha">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <a asp-action="ForgotPassword" asp-controller="Account" class="d-flex justify-content-end color-padrao">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" class="btn btn-estilo w-100">Entre</button>
+
+        <div class="mb-3 crie-uma-conta d-flex mt-3">
+            <p class="text-muted">Ainda não tem uma conta?</p>
+            <a class="criar-conta-link" asp-controller="Account" asp-action="Register">Crie uma conta</a>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Header Content-->
+    <header class="">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="navbar">
+            <div class="container">
+                <!-- Gymnasium (esquerda) -->
+                <a class="navbar-brand me-auto logo" href="/"><span class="logo-span">Gym</span>nasium</a>
+
+                <!-- Botão Toggle para dispositivos móveis -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu e botão alinhados de forma responsiva -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="/">Início</a>
+                        </li>
+                        <div class="divider"></div>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Programas</a>
+                        </li>
+                        <div class="divider"></div>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Treinos</a>
+                        </li>
+                        <div class="divider"></div>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">Nossos Planos</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botão de Login ou Dropdown à direita -->
+                    <ul class="navbar-nav">
+                        @{
+                            if (User?.Identity?.IsAuthenticated ?? false)
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center"
+                                       href="#"
+                                       id="dropdownUserMenu"
+                                       role="button"
+                                       data-bs-toggle="dropdown"
+                                       aria-expanded="false">
+                                        <img src="~/img/person-circle.svg" width="25" alt="Ícone do usuário" class="rounded-circle">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUserMenu">
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Ver perfil</a></li>
+                                        <li><a class="dropdown-item" href="/FichasTreino">Minhas fichas de treino</a></li>
+                                        <li><a class="dropdown-item" href="/HistoricoPedido">Histórico de pedido</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Sair</a></li>
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="btn btn-estilo btn-sm" style="max-width: 100px;" asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    @RenderBody();
+
+    <!-- Footer Content-->
+    <footer class="text-white" id="footer">
+        <div class="container pt-5 border-bottom">
+            <div class="row footer-row d-flex text-sm-left">
+                <div class="col-lg-4 col-sm-6 col-12 mb-3">
+                    <h4 class="h6"><a class="navbar-brand me-auto logo" href="#"><span class="logo-span">Gym</span>nasium</a></h4>
+                    <ul class="list-unstyled">
+                        <p class="small text-muted">Acredite no seu potencial e deixe a<br> motivação te guiar rumo ao sucesso!</p>
+                        <h3 class="h5">Nós siga nas redes sociais!</h3>
+                        <div class="icon-sociais d-flex">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col-md-4  col-sm-6 col-12 mb-3">
+                    <h4 class="h5">Informações</h4>
+                    <ul class="list-unstyled text-a">
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Nossos Progamas</a></li>
+                        <li><a href="#">Planos de treinos</a></li>
+                        <li><a href="#">Assinaturas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4  col-sm-6 col-12 mb-3">
+                    <h4 class="h6">Contatos</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li>(14) 99732-7233</li>
+                        <li>reinaldoemail@gmail.com</li>
+                        <li>Jaú, Tosseli de Callis, 484</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <p class="mb-0">&#64;2024 Gymnasium. Todos direitos reservados</p>
+        </div>
+    </footer>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
