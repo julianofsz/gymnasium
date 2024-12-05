@@ -1,0 +1,75 @@
+﻿@model gymnasium_academia.Models.Identity.ApplicationUser
+
+<div class="container mt-4">
+    <h4 class="mt-3 mb-1">
+        @if (!string.IsNullOrEmpty(Model.NomeCompleto))
+        {
+            var firstName = Model.NomeCompleto.Split(' ').FirstOrDefault();
+            @firstName
+        }
+    </h4>
+
+    <div class="row">
+
+        <!-- Detalhes do Usuário -->
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Informações Pessoais</h5>
+                    <p><strong>Nome Completo:</strong> @Model.NomeCompleto</p>
+                    <p><strong>Email:</strong> @Model.Email</p>
+                    <p><strong>CPF:</strong> @Model.Cpf</p>
+                    <p><strong>Telefone:</strong> @Model.PhoneNumber</p>
+                    <p><strong>Idade:</strong> @Model.Idade anos</p>
+                </div>
+            </div>
+            <!-- Informações de Assinatura -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Status da Assinatura</h5>
+                    <p><strong>Status:</strong> <span class="@("Ativa" == "Ativa" ? "text-success" : "text-danger")">Ativa</span></p>
+                    <p><strong>Tipo de Plano:</strong> Anual</p>
+                    <p><strong>Próxima Renovação:</strong> 11/07/2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-warning">Editar Usuário</a>
+        @* <a asp-action="Excluir" asp-route-id="@Model.Id" class="btn btn-danger">Excluir Usuário</a> *@
+        <a asp-action="VerTodos" class="btn btn-secondary">Voltar</a>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Detalhes do Usuário</h2>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+                    Excluir Usuário
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal de Confirmação -->
+        <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmDeleteLabel">Confirmação de Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza que deseja excluir este usuário?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <form asp-action="Excluir" asp-route-id="@Model.Id" method="post" style="display: inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

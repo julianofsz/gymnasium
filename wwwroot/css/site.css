@@ -15,6 +15,16 @@
     --azul-color: #160E4B; /* Azul Estilo do site */
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1;
+}
+
 a {
     list-style: none;
     text-decoration: none;
@@ -205,6 +215,7 @@ a {
 
 #footer {
     background-color: var(--secondary-color);
+    margin-top: auto;
 }
 
 .icon-sociais{
@@ -624,4 +635,4 @@ html {
   #navbar li a:hover {
     color: var(--padrao-color) !important;
   }
-  
+

@@ -1,35 +1,40 @@
-﻿using MongoDB.Bson;
+﻿using gymnasium_academia.Models.Treinos;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
-namespace gymnasium_academia.Models.Treinos
 
+namespace gymnasium_academia.Models.Treinos;
+
+public class FichaTreino
 {
-    public class FichaTreino
-    {
-        [BsonId]
-        public ObjectId Id { get; set; }
+    [BsonId]
+    public Guid Id { get; set; }
 
-        public Guid UsuarioId { get; set; }
+    public Guid UsuarioId { get; set; }
 
-        [Required] // Torna esse campo obrigatório
-        [StringLength(50)] // Limita o tamanho
-        public string Nome { get; set; }
+    [Required]
+    [StringLength(50)]
+    public string? Nome { get; set; }
 
-        [StringLength(300)]
-        public string Descricao { get; set; }
+    [StringLength(300)]
+    public string? Descricao { get; set; }
 
-        public List<Exercicio> Exercicios { get; set; } = new List<Exercicio>();
+    public List<Exercicio> Exercicios { get; set; } = new List<Exercicio>();
 
-        public enum Categoria { resistencia, forca, hipertrofia }
+    public CategoriaTreino Categoria { get; set; }
 
-        [Required]
-        public int Series { get; set; }
+    public List<DayOfWeek> DiasTreino { get; set; } = new List<DayOfWeek>();
 
-        [Required]
-        [StringLength(5)]
-        public string Repeticoes { get; set; }
+    public bool IsPublica { get; set; }
 
-        public bool IsPublica { get; set; }
-    }
+    public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
+
+    public DateTime? DataAtualizacao { get; set; }
 }
 
+public enum CategoriaTreino
+{
+    Resistencia,
+    Forca,
+    Hipertrofia
+}

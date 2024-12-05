@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Atualizar Senha";
+}
+
+<h2>Atualizar Senha</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<form method="post" asp-action="MudarSenha" asp-controller="Account">
+    <div class="form-group">
+        <label for="senhaAtual">Senha Atual</label>
+        <input type="password" name="senhaAtual" id="senhaAtual" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="novaSenha">Nova Senha</label>
+        <input type="password" name="novaSenha" id="novaSenha" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="confirmarNovaSenha">Confirmar Nova Senha</label>
+        <input type="password" name="confirmarNovaSenha" id="confirmarNovaSenha" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <ul>
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <li class="text-danger">@error.ErrorMessage</li>
+        }
+    </ul>
+}

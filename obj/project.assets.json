@@ -6617,11 +6617,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jufel\\source\\repos\\gymnasium-academia\\gymnasium-academia.csproj",
+      "projectUniqueName": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\gymnasium-academia.csproj",
       "projectName": "gymnasium-academia",
-      "projectPath": "C:\\Users\\jufel\\source\\repos\\gymnasium-academia\\gymnasium-academia.csproj",
+      "projectPath": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\gymnasium-academia.csproj",
       "packagesPath": "C:\\Users\\jufel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jufel\\source\\repos\\gymnasium-academia\\obj\\",
+      "outputPath": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jufel\\AppData\\Roaming\\NuGet\\NuGet.Config",

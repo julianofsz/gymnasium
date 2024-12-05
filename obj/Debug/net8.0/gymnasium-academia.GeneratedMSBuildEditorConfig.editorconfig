@@ -17,47 +17,119 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = gymnasium_academia
 build_property.RootNamespace = gymnasium_academia
-build_property.ProjectDir = C:\Users\jufel\source\repos\gymnasium-academia\
+build_property.ProjectDir = C:\Users\jufel\OneDrive\Área de Trabalho\gymnasium-academia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jufel\source\repos\gymnasium-academia
+build_property.MSBuildProjectDirectory = C:\Users\jufel\OneDrive\Área de Trabalho\gymnasium-academia
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Account/Login.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Account/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Account/Register.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Account/MudarSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNdWRhclNlbmhhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Account/Perfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Home/Index.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/CriarFichaAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JpYXJGaWNoYUFsdW5vLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/CriarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JpYXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/EditarFichaAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdGFyRmljaGFBbHVuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/ExibirFichaAluno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXhpYmlyRmljaGFBbHVuby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Admin/VerTodos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmVyVG9kb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/FichaAluno/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFBbHVub1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/FichaAluno/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFBbHVub1xEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/FichaAluno/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFBbHVub1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/FichaTreino/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmljaGFUcmVpbm9cQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Home/Privacy.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Shared/Error.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Profile/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxEZXRhbGhlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Profile/HistoricoDePedido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxIaXN0b3JpY29EZVBlZGlkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Shared/_EmailSearchResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbWFpbFNlYXJjaFJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Shared/_Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/_ViewImports.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/_ViewStart.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jufel/source/repos/gymnasium-academia/Views/Shared/_Layout.cshtml]
+[C:/Users/jufel/OneDrive/Área de Trabalho/gymnasium-academia/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0tsfje24ph

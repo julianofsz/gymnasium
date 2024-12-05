@@ -12,11 +12,11 @@ namespace gymnasium_academia.Models.Identity
     [CollectionName("Users")]
     public class ApplicationUser : MongoIdentityUser<Guid>
     {
-        public string NomeCompleto { get; set; }
+        public string? NomeCompleto { get; set; }
 
-        public string Telefone { get; set; }
+        public string? Telefone { get; set; }
 
-        public string Cpf { get; set; }
+        public string? Cpf { get; set; }
 
         public DateTime DataNascimento { get; set; }
 
@@ -27,6 +27,8 @@ namespace gymnasium_academia.Models.Identity
         public List<FichaTreino> FichasTreino { get; set; } = new List<FichaTreino>();
 
         public TipoUsuario Tipo { get; set; }
+
+        public List<FichaAluno> FichasAluno { get; set; } = new List<FichaAluno>();
 
         public int Idade => DateTime.Today.Year - DataNascimento.Year - (DateTime.Today < DataNascimento.AddYears(DateTime.Today.Year - DataNascimento.Year) ? 1 : 0);
 

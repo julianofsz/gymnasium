@@ -1,4 +1,4 @@
-using gymnasium_academia.Models;
+using gymnasium_academia.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

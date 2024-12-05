@@ -1,0 +1,119 @@
+﻿@model gymnasium_academia.Models.ViewModels.FichaAluno
+
+@{
+    ViewData["Title"] = "Criar Ficha de Aluno";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+    <hr>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="p-1 mb-2 bg-danger text-white">@ViewBag.Message</div>
+    }
+
+    <form asp-action="Criar" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="Endereco_Cep">CEP</label>
+            <input type="text" asp-for="Endereco.Cep" class="form-control" id="Endereco_Cep" placeholder="Digite o CEP (00000-000)" required onblur="buscarCep()" />
+            <span asp-validation-for="Endereco.Cep" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Logradouro">Logradouro</label>
+            <input type="text" asp-for="Endereco.Logradouro" class="form-control" id="Endereco_Logradouro" placeholder="Digite o logradouro" required />
+            <span asp-validation-for="Endereco.Logradouro" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Numero">Número</label>
+            <input type="text" asp-for="Endereco.Numero" class="form-control" id="Endereco_Numero" placeholder="Digite o número" required />
+            <span asp-validation-for="Endereco.Numero" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Complemento">Complemento</label>
+            <input type="text" asp-for="Endereco.Complemento" class="form-control" id="Endereco_Complemento" placeholder="Digite o complemento (opcional)" />
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Bairro">Bairro</label>
+            <input type="text" asp-for="Endereco.Bairro" class="form-control" id="Endereco_Bairro" placeholder="Digite o bairro" required />
+            <span asp-validation-for="Endereco.Bairro" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Cidade">Cidade</label>
+            <input type="text" asp-for="Endereco.Cidade" class="form-control" id="Endereco_Cidade" placeholder="Digite a cidade" required />
+            <span asp-validation-for="Endereco.Cidade" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Endereco_Estado">Estado</label>
+            <input type="text" asp-for="Endereco.Estado" class="form-control" id="Endereco_Estado" placeholder="Digite o estado" required />
+            <span asp-validation-for="Endereco.Estado" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="EstadoCivil">Estado Civil</label>
+            <select asp-for="EstadoCivil" class="form-control" id="EstadoCivil" required>
+                <option value="">Selecione o Estado Civil</option>
+                @foreach (var estadoCivil in Enum.GetValues(typeof(gymnasium_academia.Models.ViewModels.EstadoCivil)))
+                {
+                    <option value="@estadoCivil">@estadoCivil</option>
+                }
+            </select>
+            <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="TemAnamnese">Tem Anamnese?</label>
+            <div class="form-check">
+                <input type="checkbox" asp-for="TemAnamnese" class="form-check-input" id="TemAnamnese">
+                <label class="form-check-label" for="TemAnamnese">Sim</label>
+            </div>
+            <span asp-validation-for="TemAnamnese" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cadastrar Ficha</button>
+    </form>
+</div>
+
+<!-- jQuery e jQuery Mask Plugin -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+<script>
+    // Máscaras de CPF e CEP
+    $(document).ready(function () {
+        $('#Endereco_Cep').mask('00000-000');
+        $('#CPF').mask('000.000.000-00');
+    });
+
+    function buscarCep() {
+        var cep = $('#Endereco_Cep').val().replace(/\D/g, '');
+        if (cep.length === 8) {
+            $.ajax({
+                url: `https://viacep.com.br/ws/${cep}/json/`,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (!data.erro) {
+                        $('#Endereco_Logradouro').val(data.logradouro);
+                        $('#Endereco_Bairro').val(data.bairro);
+                        $('#Endereco_Cidade').val(data.localidade);
+                        $('#Endereco_Estado').val(data.uf);
+                    } else {
+                        alert('CEP não encontrado.');
+                    }
+                },
+                error: function () {
+                    alert('Erro ao consultar o CEP.');
+                }
+            });
+        } else {
+            alert('Por favor, insira um CEP válido.');
+        }
+    }
+</script>

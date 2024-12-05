@@ -5,27 +5,27 @@ namespace gymnasium_academia.Models.ViewModels
     public class User
     {
         [Required(ErrorMessage = "Nome é obrigatório.")]
-        public string NomeCompleto { get; set; }
+        public string? NomeCompleto { get; set; }
 
         [Required]
         [EmailAddress(ErrorMessage = "Email inválido")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required(ErrorMessage = "Senha é obrigatória.")]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [Required(ErrorMessage = "Confirmação de senha é obrigatória.")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "As senhas não coincidem.")]
-        public string ConfirmPassword { get; set; }
+        public string? ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "CPF é obrigatório.")]
         [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}-\d{2}$", ErrorMessage = "Formato de CPF inválido.")]
-        public string Cpf { get; set; }
+        public string? Cpf { get; set; }
 
         [Required(ErrorMessage = "Telefone é obrigatório.")]
         [RegularExpression(@"^\(?\d{2}\)?\s?\d{4,5}-\d{4}$", ErrorMessage = "Formato de telefone inválido.")]
-        public string Telefone { get; set; }
+        public string? Telefone { get; set; }
 
         [Required(ErrorMessage = "Data de nascimento é obrigatória.")]
         [DataType(DataType.Date)]

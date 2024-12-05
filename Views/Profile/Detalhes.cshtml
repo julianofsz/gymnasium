@@ -1,0 +1,97 @@
+﻿@model gymnasium_academia.Models.Identity.ApplicationUser
+
+
+@{
+    ViewData["Title"] = "Meu Perfil";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Foto e Informações Gerais -->
+        <div class="col-md-12 text-center mb-4">
+            <div class="d-flex flex-column align-items-center">
+                <div class="profile-picture bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; font-size: 2rem;">
+                    N
+                </div>
+                <a href="#" class="text-primary mt-2">Editar foto</a>
+                <h4 class="mt-3 mb-1">
+                    @if (!string.IsNullOrEmpty(Model.NomeCompleto))
+                    {
+                        var firstName = Model.NomeCompleto.Split(' ').FirstOrDefault();
+                        @firstName
+                    }
+                </h4>
+                @if (User.IsInRole("Admin"))
+                {
+                    <p>Admin</p>
+                }
+                else if (User.IsInRole("Usuario"))
+                {
+                    <p>Usuario</p>
+                }
+                else if (User.IsInRole("Aluno"))
+                {
+                    <p>Aluno</p>
+                }
+                else if (User.IsInRole("Personal"))
+                {
+                    <p>Personal</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Detalhes do Usuário -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Detalhes do usuário</h5>
+                    <p><strong>Nome:</strong> @Html.DisplayFor(model => model.NomeCompleto)</p>
+                    <p><strong>Email:</strong> @Html.DisplayFor(model => model.Email)</p>
+                    <p><strong>CPF:</strong> @Html.DisplayFor(model => model.Cpf)</p>
+                    <p><strong>Telefone:</strong> @Html.DisplayFor(model => model.PhoneNumber)</p>
+                    <p><strong>Idade:</strong> @Html.DisplayFor(model => model.Idade) anos</p>
+                    <a asp-action="Editar" asp-controller="Account" class="btn btn-primary">Editar perfil</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status da Assinatura -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Status da assinatura</h5>
+                    <p><strong>Assinatura:</strong> <span class="text-success">Ativa</span></p>
+                    <p><strong>Tipo de plano:</strong> Anual</p>
+                    <p><strong>Próxima renovação:</strong> 11/07/2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* <div class="row">
+        <!-- Tabs -->
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Visão Geral</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Detalhes" asp-controller="FichaAluno">Ficha de Aluno</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ficha de Treino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Histórico de Pedido</a>
+                </li>
+            </ul>
+        </div>
+    </div> *@
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

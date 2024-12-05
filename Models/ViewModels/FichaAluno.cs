@@ -5,10 +5,10 @@ namespace gymnasium_academia.Models.ViewModels
 {
     public class FichaAluno
     {
-        public Guid UsuarioId { get; set; } // Id do aluno
+        public string? UsuarioId { get; set; }
 
         [Required(ErrorMessage = "Endereço é obrigatório.")]
-        public Endereco Endereco { get; set; }
+        public Endereco? Endereco { get; set; }
 
         [Required(ErrorMessage = "Estado civil é obrigatório.")]
         public EstadoCivil EstadoCivil { get; set; }
@@ -18,9 +18,6 @@ namespace gymnasium_academia.Models.ViewModels
 
         public enum Sexo { Outros, Feminino, Masculino }
 
-        public DateTime DataNascimento { get; set; }
-
-        public int Idade => DateTime.Now.Year - DataNascimento.Year - (DateTime.Now.DayOfYear < DataNascimento.DayOfYear ? 1 : 0);
     }
 
     // Estado Civil do Aluno
@@ -37,24 +34,24 @@ namespace gymnasium_academia.Models.ViewModels
     public class Endereco
     {
         [Required(ErrorMessage = "Logradouro é obrigatório.")]
-        public string Logradouro { get; set; }
+        public string? Logradouro { get; set; }
 
         [Required(ErrorMessage = "Número é obrigatório.")]
-        public string Numero { get; set; }
+        public string? Numero { get; set; }
 
         public string? Complemento { get; set; }
 
         [Required(ErrorMessage = "Bairro é obrigatório.")]
-        public string Bairro { get; set; }
+        public string? Bairro { get; set; }
 
         [Required(ErrorMessage = "Cidade é obrigatória.")]
-        public string Cidade { get; set; }
+        public string? Cidade { get; set; }
 
         [Required(ErrorMessage = "Estado é obrigatório.")]
-        public string Estado { get; set; }
+        public string? Estado { get; set; }
 
         [Required(ErrorMessage = "CEP é obrigatório.")]
         [RegularExpression(@"^\d{5}-\d{3}$", ErrorMessage = "CEP inválido. O formato correto é 00000-000.")]
-        public string Cep { get; set; }
+        public string? Cep { get; set; }
     }
 }

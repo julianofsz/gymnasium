@@ -1,0 +1,63 @@
+﻿@model gymnasium_academia.Models.ViewModels.FichaAluno
+
+@{
+    ViewData["Title"] = "Ficha do Aluno";
+}
+
+
+<div class="container">
+    <!-- Dados Pessoais -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Dados Pessoais</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Estado Civil:</strong> @Model.EstadoCivil.ToString()</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Possui Anamnese:</strong> @(Model.TemAnamnese ? "Sim" : "Não")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Endereço -->
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Endereço</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Logradouro:</strong> @Model.Endereco.Logradouro</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Número:</strong> @Model.Endereco.Numero</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Complemento:</strong> @(string.IsNullOrWhiteSpace(Model.Endereco.Complemento) ? "Não informado" : Model.Endereco.Complemento)</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Bairro:</strong> @Model.Endereco.Bairro</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Cidade:</strong> @Model.Endereco.Cidade</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Estado:</strong> @Model.Endereco.Estado</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>CEP:</strong> @Model.Endereco.Cep</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@model gymnasium_academia.Models.Identity.ApplicationUser
+
+<div class="mt-4">
+    <h5 class="mb-3">Detalhes do Usuário</h5>
+    <p><strong>Nome:</strong> @Html.DisplayFor(model => model.NomeCompleto)</p>
+    <p><strong>Email:</strong> @Html.DisplayFor(model => model.Email)</p>
+    <p><strong>CPF:</strong> @Html.DisplayFor(model => model.Cpf)</p>
+    <p><strong>Telefone:</strong> @Html.DisplayFor(model => model.PhoneNumber)</p>
+    <p><strong>Idade:</strong> @Html.DisplayFor(model => model.Idade) anos</p>
+</div>

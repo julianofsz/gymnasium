@@ -1,4 +1,4 @@
-namespace gymnasium_academia.Models
+namespace gymnasium_academia.Models.ViewModels
 {
     public class ErrorViewModel
     {

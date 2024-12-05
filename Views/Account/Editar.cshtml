@@ -1,0 +1,74 @@
+﻿@model UserUpdate
+
+@{
+    ViewData["Title"] = "Atualizar Dados";
+}
+
+<h2>Atualizar Dados</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@if (TempData["Warning"] != null)
+{
+    <div class="alert alert-warning">@TempData["Warning"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form asp-action="Editar" method="post">
+    <div class="form-group">
+        <label asp-for="NomeCompleto"></label>
+        <div class="input-group">
+            <input asp-for="NomeCompleto" class="form-control" placeholder="Alterar Nome Completo" disabled id="NomeCompleto">
+            <button type="button" class="btn btn-outline-secondary" onclick="toggleField('NomeCompleto')">Habilitar</button>
+        </div>
+        <span asp-validation-for="NomeCompleto" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <div class="input-group">
+            <input asp-for="Email" class="form-control" placeholder="Alterar Email" disabled id="Email">
+            <button type="button" class="btn btn-outline-secondary" onclick="toggleField('Email')">Habilitar</button>
+        </div>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Telefone"></label>
+        <div class="input-group">
+            <input asp-for="Telefone" class="form-control" placeholder="Alterar Telefone" disabled id="Telefone">
+            <button type="button" class="btn btn-outline-secondary" onclick="toggleField('Telefone')">Habilitar</button>
+        </div>
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SenhaAtual"></label>
+        <div class="input-group">
+            <input asp-for="SenhaAtual" class="form-control" placeholder="Digite sua Senha Atual" disabled id="SenhaAtual">
+            <button type="button" class="btn btn-outline-secondary" onclick="toggleField('SenhaAtual')">Habilitar</button>
+        </div>
+        <span asp-validation-for="SenhaAtual" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+
+<script>
+    function toggleField(fieldId) {
+        const field = document.getElementById(fieldId);
+        field.disabled = !field.disabled; // Alterna o estado 'disabled'
+        field.focus(); // Foca no campo habilitado para facilitar a edição
+    }
+</script>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
