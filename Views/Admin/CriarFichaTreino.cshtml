@@ -1,0 +1,105 @@
+﻿@model gymnasium_academia.Models.ViewModels.FichaTreino
+
+@{
+    ViewData["Title"] = "Criar Ficha de Treino";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" asp-action="CriarFichaTreino">
+    <div class="form-group">
+        <label asp-for="NomeTreino" class="control-label"></label>
+        <input asp-for="NomeTreino" class="form-control" placeholder="Nome do Treino" />
+        <span asp-validation-for="NomeTreino" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descricao" class="control-label"></label>
+        <textarea asp-for="Descricao" class="form-control" placeholder="Descrição do Treino"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <div id="diasContainer"></div>
+    <button type="button" class="btn btn-info mt-2" onclick="adicionarDia()">Adicionar Novo Dia</button>
+
+    <button type="submit" class="btn btn-primary mt-3">Salvar Ficha de Treino</button>
+</form>
+
+@section Scripts {
+    <script>
+        let diaIndex = 0;
+
+        function adicionarDia() {
+            let diasContainer = document.getElementById('diasContainer');
+            let novoDia = document.createElement('div');
+            novoDia.classList.add('dia', 'card', 'mb-3', 'p-3');
+            novoDia.id = `dia-${diaIndex}`;
+
+            novoDia.innerHTML = `
+                        <div class="form-group">
+                            <label>Dia</label>
+                            <select class="form-control" name="DiasDeTreino[${diaIndex}].Dia">
+                                <option value="Segunda-feira">Segunda-feira</option>
+                                <option value="Terça-feira">Terça-feira</option>
+                                <option value="Quarta-feira">Quarta-feira</option>
+                                <option value="Quinta-feira">Quinta-feira</option>
+                                <option value="Sexta-feira">Sexta-feira</option>
+                                <option value="Sábado">Sábado</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Exercícios</label>
+                            <div class="exercicios-list" id="exercicios-dia-${diaIndex}">
+                                <!-- Exercícios serão adicionados aqui -->
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mt-2" onclick="adicionarExercicio(${diaIndex})">Adicionar Exercício</button>
+                        </div>
+
+                        <button type="button" class="btn btn-danger btn-sm mt-2" onclick="removerDia(${diaIndex})">Excluir Dia</button>
+                    `;
+
+            diasContainer.appendChild(novoDia);
+            diaIndex++;
+        }
+
+        function adicionarExercicio(diaIndex) {
+            let exerciciosList = document.getElementById(`exercicios-dia-${diaIndex}`);
+
+            let novoExercicio = document.createElement('div');
+            novoExercicio.classList.add('exercicio', 'card', 'p-2', 'mb-2');
+
+            novoExercicio.innerHTML = `
+                        <div class="form-group">
+                            <label>Nome do Exercício</label>
+                            <input class="form-control" name="DiasDeTreino[${diaIndex}].Exercicios[${exerciciosList.children.length}].Nome" placeholder="Nome do Exercício" />
+                        </div>
+                        <div class="form-group">
+                            <label>Repetições</label>
+                            <input class="form-control" name="DiasDeTreino[${diaIndex}].Exercicios[${exerciciosList.children.length}].Repeticoes" type="number" placeholder="Repetições" />
+                        </div>
+                        <div class="form-group">
+                            <label>Séries</label>
+                            <input class="form-control" name="DiasDeTreino[${diaIndex}].Exercicios[${exerciciosList.children.length}].Series" type="number" placeholder="Séries" />
+                        </div>
+                        <div class="form-group">
+                            <label>Grupo Muscular</label>
+                            <input class="form-control" name="DiasDeTreino[${diaIndex}].Exercicios[${exerciciosList.children.length}].GrupoMuscular" placeholder="Grupo Muscular" />
+                        </div>
+                        <button type="button" class="btn btn-danger btn-sm mt-2" onclick="removerExercicio(${diaIndex}, ${exerciciosList.children.length})">Excluir Exercício</button>
+                    `;
+
+            exerciciosList.appendChild(novoExercicio);
+        }
+
+        function removerExercicio(diaIndex, exercicioIndex) {
+            let exercicio = document.querySelector(`#dia-${diaIndex} .exercicios-list`).children[exercicioIndex];
+            exercicio.remove();
+        }
+
+        function removerDia(diaIndex) {
+            let dia = document.getElementById(`dia-${diaIndex}`);
+            dia.remove();
+        }
+    </script>
+}

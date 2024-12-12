@@ -59,15 +59,20 @@
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUserMenu">
                                         <li><a class="dropdown-item" asp-controller="Account" asp-action="Perfil">Ver perfil</a></li>
                                         <li><a class="dropdown-item" asp-controller="FichaAluno" asp-action="Detalhes">Ficha de Aluno</a></li>
-                                        <li><a class="dropdown-item" asp-controller="FichaTreino" asp-action="Index">Minhas fichas de treino</a></li>
                                         <li><a class="dropdown-item" asp-controller="Profile" asp-action="HistoricoDePedido">Histórico de pedido</a></li>
                                         <li><a class="dropdown-item" asp-controller="Account" asp-action="MudarSenha">Mudar Senha</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-
                                         @if (User.IsInRole("Admin"))
                                         {
-                                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="VerTodos">Alunos</a></li>
-                                            <li><a class="dropdown-item" asp-controller="FichaTreino" asp-action="AdminPanel">Fichas de Treino</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Admin" asp-action="VerTodos">Lista de Usuarios</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                        }else if (User.IsInRole("Personal"))
+                                        {
+                                            <li><a class="dropdown-item" asp-controller="Personal" asp-action="VerAlunos">Lista de Alunos</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                        }
+                                        else if (User.IsInRole("Aluno"))
+                                        {
+                                            <li><a class="dropdown-item" asp-controller="Profile" asp-action="VerFichasTreino">Fichas de Treino</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                         }
 

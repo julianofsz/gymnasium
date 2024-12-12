@@ -1,0 +1,358 @@
+{
+  "fichasPublicas": [
+    {
+      "id": "1",
+      "titulo": "Iniciante Full Body",
+      "descricao": "Treino para iniciantes que trabalha o corpo todo em um único dia.",
+      "diasDaSemana": [ "Segunda-feira", "Quarta-feira", "Sexta-feira" ],
+      "dias": [
+        {
+          "dia": "Segunda-feira",
+          "exercicios": [
+            {
+              "nome": "Agachamento",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Supino Reto",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Puxada Frontal",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Costas"
+            }
+          ]
+        },
+        {
+          "dia": "Quarta-feira",
+          "exercicios": [
+            {
+              "nome": "Leg Press",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Desenvolvimento Militar",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Ombros"
+            },
+            {
+              "nome": "Remada Curvada",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Costas"
+            }
+          ]
+        },
+        {
+          "dia": "Sexta-feira",
+          "exercicios": [
+            {
+              "nome": "Agachamento",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Supino Inclinado",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Rosca Direta",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Bíceps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Iniciante ABC",
+      "descricao": "Divisão de treino ABC para iniciantes.",
+      "diasDaSemana": [ "Segunda-feira", "Quarta-feira", "Sexta-feira" ],
+      "dias": [
+        {
+          "dia": "Segunda-feira",
+          "exercicios": [
+            {
+              "nome": "Supino Reto",
+              "series": 3,
+              "repeticoes": 10,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Crucifixo",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Tríceps Pulley",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Tríceps"
+            }
+          ]
+        },
+        {
+          "dia": "Quarta-feira",
+          "exercicios": [
+            {
+              "nome": "Agachamento",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Leg Press",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Mesa Flexora",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            }
+          ]
+        },
+        {
+          "dia": "Sexta-feira",
+          "exercicios": [
+            {
+              "nome": "Puxada Frontal",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Remada Curvada",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Rosca Alternada",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Bíceps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "ABCD",
+      "descricao": "Divisão de treino avançada com 4 dias por semana.",
+      "diasDaSemana": [ "Segunda-feira", "Terça-feira", "Quinta-feira", "Sexta-feira" ],
+      "dias": [
+        {
+          "dia": "Segunda-feira",
+          "exercicios": [
+            {
+              "nome": "Supino Reto",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Crucifixo Inclinado",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Tríceps Francês",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Tríceps"
+            }
+          ]
+        },
+        {
+          "dia": "Terça-feira",
+          "exercicios": [
+            {
+              "nome": "Agachamento Livre",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Passada",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Panturrilha em Pé",
+              "series": 4,
+              "repeticoes": 15,
+              "grupoMuscular": "Panturrilhas"
+            }
+          ]
+        },
+        {
+          "dia": "Quinta-feira",
+          "exercicios": [
+            {
+              "nome": "Puxada Alta",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Remada Unilateral",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Rosca Martelo",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Bíceps"
+            }
+          ]
+        },
+        {
+          "dia": "Sexta-feira",
+          "exercicios": [
+            {
+              "nome": "Desenvolvimento Militar",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Ombros"
+            },
+            {
+              "nome": "Elevação Lateral",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Ombros"
+            },
+            {
+              "nome": "Abdome na Roda",
+              "series": 4,
+              "repeticoes": 15,
+              "grupoMuscular": "Abdômen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Upper-Lower",
+      "descricao": "Treino dividido em parte superior e inferior do corpo.",
+      "diasDaSemana": [ "Segunda-feira", "Terça-feira", "Quinta-feira", "Sexta-feira" ],
+      "dias": [
+        {
+          "dia": "Segunda-feira",
+          "exercicios": [
+            {
+              "nome": "Supino Reto",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Peito"
+            },
+            {
+              "nome": "Desenvolvimento Militar",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Ombros"
+            },
+            {
+              "nome": "Rosca Direta",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Bíceps"
+            }
+          ]
+        },
+        {
+          "dia": "Terça-feira",
+          "exercicios": [
+            {
+              "nome": "Agachamento Livre",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Stiff",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Panturrilha Sentado",
+              "series": 3,
+              "repeticoes": 15,
+              "grupoMuscular": "Panturrilhas"
+            }
+          ]
+        },
+        {
+          "dia": "Quinta-feira",
+          "exercicios": [
+            {
+              "nome": "Puxada Alta",
+              "series": 4,
+              "repeticoes": 8,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Remada Curvada",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Costas"
+            },
+            {
+              "nome": "Rosca Martelo",
+              "series": 3,
+              "repeticoes": 10,
+              "grupoMuscular": "Bíceps"
+            }
+          ]
+        },
+        {
+          "dia": "Sexta-feira",
+          "exercicios": [
+            {
+              "nome": "Leg Press",
+              "series": 4,
+              "repeticoes": 10,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Flexora deitado",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Pernas"
+            },
+            {
+              "nome": "Tríceps Pulley",
+              "series": 3,
+              "repeticoes": 12,
+              "grupoMuscular": "Tríceps"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

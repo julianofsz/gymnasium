@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\views\\fichaaluno\\criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\fichaaluno\\criar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\controllers\\fichaalunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:controllers\\fichaalunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\views\\profile\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\profile\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\views\\admin\\vertodos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\admin\\vertodos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\views\\admin\\criarusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\admin\\criarusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\models\\viewmodels\\userupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:models\\viewmodels\\userupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium-academia\\views\\profile\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\profile\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAuwNcAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T13:19:42.003Z",
               "IsPinned": true,
@@ -56,81 +44,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AQIAAH0BAAAAAAAAAAAQwJMBAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T13:39:17.751Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Criar.cshtml",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\FichaAluno\\Criar.cshtml",
-              "RelativeDocumentMoniker": "Views\\FichaAluno\\Criar.cshtml",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\FichaAluno\\Criar.cshtml",
-              "RelativeToolTip": "Views\\FichaAluno\\Criar.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAABEAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T22:09:19.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FichaAlunoController.cs",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\FichaAlunoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FichaAlunoController.cs",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Controllers\\FichaAlunoController.cs",
-              "RelativeToolTip": "Controllers\\FichaAlunoController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowHsAAABHAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T21:54:50.556Z",
+              "WhenOpened": "2024-12-12T01:41:41.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VerTodos.cshtml",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Admin\\VerTodos.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\VerTodos.cshtml",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Admin\\VerTodos.cshtml",
-              "RelativeToolTip": "Views\\Admin\\VerTodos.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACsAAAA/AAAA",
+              "DocumentIndex": 3,
+              "Title": "CriarFichaTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Profile\\CriarFichaTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\CriarFichaTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Profile\\CriarFichaTreino.cshtml",
+              "RelativeToolTip": "Views\\Profile\\CriarFichaTreino.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T17:27:18.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T01:32:09.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CriarUsuario.cshtml",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Admin\\CriarUsuario.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\CriarUsuario.cshtml",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Admin\\CriarUsuario.cshtml",
-              "RelativeToolTip": "Views\\Admin\\CriarUsuario.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "DocumentIndex": 2,
+              "Title": "VerFichasTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Profile\\VerFichasTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\VerFichasTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Views\\Profile\\VerFichasTreino.cshtml",
+              "RelativeToolTip": "Views\\Profile\\VerFichasTreino.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T14:36:56.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserUpdate.cs",
-              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Models\\ViewModels\\UserUpdate.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\UserUpdate.cs",
-              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium-academia\\Models\\ViewModels\\UserUpdate.cs",
-              "RelativeToolTip": "Models\\ViewModels\\UserUpdate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:09:53.226Z"
+              "WhenOpened": "2024-12-12T01:15:13.147Z"
             }
           ]
         }

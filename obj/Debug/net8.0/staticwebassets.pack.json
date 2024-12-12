@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\data\\exercicios.json"
     },
     {
+      "Id": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\wwwroot\\data\\fichatreino.json",
+      "PackagePath": "staticwebassets\\data\\fichatreino.json"
+    },
+    {
       "Id": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

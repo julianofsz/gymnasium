@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mw2rzwmrDx3RBdY75RhWQwYLjAosdLQXluQVaBadm4U=",
+  "Hash": "isqBjJjNyzYiSjC9sNwoNHNOhtB8niPTLAygBEOlGoI=",
   "Source": "gymnasium-academia",
   "BasePath": "_content/gymnasium-academia",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\exercicios.json"
+    },
+    {
+      "Identity": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\wwwroot\\data\\fichatreino.json",
+      "SourceId": "gymnasium-academia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\wwwroot\\",
+      "BasePath": "_content/gymnasium-academia",
+      "RelativePath": "data/fichatreino.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\fichatreino.json"
     },
     {
       "Identity": "C:\\Users\\jufel\\OneDrive\\Área de Trabalho\\gymnasium-academia\\wwwroot\\favicon.ico",

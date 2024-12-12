@@ -2,22 +2,14 @@
 using gymnasium_academia.Settings;
 using Microsoft.AspNetCore.Identity;
 using gymnasium_academia.Models.Identity;
-using gymnasium_academia.Models;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var mongoDbSettings = builder.Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
 
-// Registrar o IMongoDatabase
 builder.Services.AddSingleton<IMongoClient>(sp =>
     new MongoClient(mongoDbSettings.ConnectionString));
-
-builder.Services.AddSingleton(sp =>
-{
-    var client = sp.GetRequiredService<IMongoClient>();
-    return client.GetDatabase(mongoDbSettings.Name);
-});
 
 // Configurar Identity com MongoDB
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()

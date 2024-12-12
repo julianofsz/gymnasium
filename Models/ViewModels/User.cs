@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace gymnasium_academia.Models.ViewModels
 {
     public class User
     {
+
         [Required(ErrorMessage = "Nome é obrigatório.")]
         public string? NomeCompleto { get; set; }
 

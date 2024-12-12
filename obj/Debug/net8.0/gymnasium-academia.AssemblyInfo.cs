@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gymnasium-academia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41a69e951e48ca037cc8dc280ce3930f25208b64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f13e800670128f2a8dba568dde07524bc5c488a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("gymnasium-academia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gymnasium-academia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

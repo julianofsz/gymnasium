@@ -36,7 +36,8 @@
                     <td>
                         <a asp-action="Detalhes" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Detalhes</a>
                         <a asp-controller="Admin" asp-action="ExibirFichaAluno" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Ficha de Aluno</a>
-                        <a asp-controller="Admin" asp-action="EditarFichaAluno" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Editar Ficha de Aluno</a>
+                        <a asp-controller="Admin" asp-action="CriarFichaTreino" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Criar Ficha de Treino</a>
+                        <a asp-controller="Admin" asp-action="VerFichasTreino" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Fichas de Treino</a>
                     </td>
                 </tr>
             }

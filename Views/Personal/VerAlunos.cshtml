@@ -1,0 +1,58 @@
+﻿@model IEnumerable<gymnasium_academia.Models.Identity.ApplicationUser>
+
+<!-- Container para alinhar e dar espaçamento à página -->
+<div class="container mt-4">
+
+    <!-- Tabela de alunos -->
+    <table class="table table-bordered table-hover" id="alunoTable">
+        <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar por nome..." onkeyup="searchTable()" />
+        </div>
+
+        <thead class="thead-light">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => aluno.NomeCompleto)</td>
+                    <td>@Html.DisplayFor(modelItem => aluno.Email)</td>
+                    <td>
+                        <a asp-controller="Personal" asp-action="ExibirFichaAluno" asp-route-id="@aluno.Id" class="btn btn-sm btn-info">Ficha de Aluno</a>
+                        <a asp-controller="Personal" asp-action="CriarFichaTreino" asp-route-id="@aluno.Id" class="btn btn-sm btn-info">Criar Ficha de Treino</a>
+                        <a asp-controller="Personal" asp-action="VerFichasTreino" asp-route-id="@aluno.Id" class="btn btn-sm btn-info">Fichas de Treino</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("alunoTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Filtra pelo nome (primeira coluna)
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+}

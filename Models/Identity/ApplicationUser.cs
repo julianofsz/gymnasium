@@ -4,7 +4,6 @@ using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 using MongoDbGenericRepository.Attributes;
 using System.ComponentModel.DataAnnotations;
-using gymnasium_academia.Models.Treinos;
 using gymnasium_academia.Models.ViewModels;
 
 namespace gymnasium_academia.Models.Identity
@@ -12,6 +11,7 @@ namespace gymnasium_academia.Models.Identity
     [CollectionName("Users")]
     public class ApplicationUser : MongoIdentityUser<Guid>
     {
+
         public string? NomeCompleto { get; set; }
 
         public string? Telefone { get; set; }

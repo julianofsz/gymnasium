@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Data;
+using System.Diagnostics;
 
 namespace gymnasium_academia.Controllers
 {
@@ -45,6 +46,8 @@ namespace gymnasium_academia.Controllers
             return View(userRoles);
         }
 
+
+        //Atualizar permissões
         [HttpPost("admin/update-role/{userId}")]
         public async Task<IActionResult> UpdateRole(string userId, [FromBody] RoleUpdateModel model)
         {
@@ -80,7 +83,6 @@ namespace gymnasium_academia.Controllers
 
             return Ok("Role atualizada com sucesso!");
         }
-
 
 
         public class RoleUpdateModel
@@ -383,7 +385,7 @@ namespace gymnasium_academia.Controllers
 
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditarFichaAluno(FichaAluno fichaAluno, string id)
         {
             if (ModelState.IsValid)
@@ -415,6 +417,221 @@ namespace gymnasium_academia.Controllers
 
             return View(fichaAluno);
         }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> VerFichasTreino(string id)
+        {
+            Console.WriteLine($"ID recebido: {id}");
+
+            var aluno = await userManager.FindByIdAsync(id);
+            if (aluno == null)
+            {
+                Console.WriteLine("Usuário não encontrado. Redirecionando para a Home.");
+                return RedirectToAction("Index", "Home");
+            }
+
+            Console.WriteLine($"Aluno encontrado: {aluno.UserName}");
+            var fichaTreino = aluno.FichasTreino;
+            return View(fichaTreino);
+        }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> CriarFichaTreino(string id)
+        {
+            var aluno = await userManager.FindByIdAsync(id);
+            if (aluno == null)
+            {
+                return RedirectToAction("VerTodos", "Admin"); // Redireciona se o aluno não for encontrado
+            }
+
+            // Verifica se o aluno já possui 3 fichas de treino
+            if (aluno.FichasTreino.Count >= 3)
+            {
+                TempData["ErrorMessage"] = "O aluno já possui o limite de 3 fichas de treino.";
+                return RedirectToAction("VerTodos", "Admin");
+            }
+
+            // Cria uma nova ficha de treino vazia
+            var fichaTreino = new FichaTreino();
+
+            return View(fichaTreino); // Retorna a view para o admin preencher a ficha
+        }
+
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> CriarFichaTreino(FichaTreino model, string id)
+        {
+            try
+            {
+                Console.WriteLine("Iniciando a criação da ficha de treino.");
+
+                // Verifique se o modelo é válido
+                if (ModelState.IsValid)
+                {
+                    Console.WriteLine("Modelo válido, processando...");
+
+                    // Verifique se o aluno já possui 3 fichas
+                    var aluno = await userManager.FindByIdAsync(id);
+                    if (aluno == null)
+                    {
+                        Console.WriteLine("Aluno não encontrado!");
+                        return NotFound("Aluno não encontrado.");
+                    }
+
+                    Console.WriteLine($"Aluno encontrado: {aluno.UserName}");
+
+                    if (aluno.FichasTreino.Count >= 3)
+                    {
+                        Console.WriteLine("O aluno já tem 3 fichas de treino.");
+                        ModelState.AddModelError(string.Empty, "O aluno já tem 3 fichas de treino.");
+                        return View(model);
+                    }
+
+                    // Validar dias e exercícios
+                    var diasComExercicios = model.DiasDeTreino
+                        .Where(d => d.Exercicios != null && d.Exercicios.Count > 0)
+                        .ToList();
+
+                    Console.WriteLine("Verificando dias e exercícios adicionados:");
+
+                    foreach (var dia in model.DiasDeTreino)
+                    {
+                        Console.WriteLine($"Dia: {dia.Dia}, Exercícios: {dia.Exercicios?.Count ?? 0}");
+                        if (dia.Exercicios != null)
+                        {
+                            foreach (var ex in dia.Exercicios)
+                            {
+                                Console.WriteLine($"  Exercício: {ex.Nome}, Séries: {ex.Series}, Repetições: {ex.Repeticoes}");
+                            }
+                        }
+                    }
+
+                    if (diasComExercicios.Count == 0)
+                    {
+                        Console.WriteLine("Nenhum exercício foi adicionado.");
+                        ModelState.AddModelError(string.Empty, "A ficha deve ter pelo menos um exercício.");
+                        return View(model);
+                    }
+
+                    // Criar a ficha de treino para o aluno
+                    var fichaTreino = new FichaTreino
+                    {
+                        Id = Guid.NewGuid(),
+                        UsuarioId = id,
+                        NomeTreino = model.NomeTreino,
+                        Descricao = model.Descricao,
+                        DataInicio = DateTime.Now,
+                        DiasDeTreino = diasComExercicios, // Garantir que apenas dias válidos sejam salvos
+                        Observacoes = model.Observacoes
+                    };
+
+                    // Adicionar a ficha ao aluno
+                    aluno.FichasTreino.Add(fichaTreino);
+                    await userManager.UpdateAsync(aluno);
+                    Console.WriteLine("Ficha de treino criada e salva com sucesso!");
+
+                    return RedirectToAction("VerTodos", "Admin");
+                }
+                else
+                {
+                    Console.WriteLine("Modelo inválido. Verifique os erros abaixo:");
+                    foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        Console.WriteLine($"Erro: {error.ErrorMessage}");
+                    }
+
+                    return View(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao criar ficha de treino: {ex.Message}");
+                return StatusCode(500, "Erro interno ao criar a ficha de treino.");
+            }
+        }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Admin, Personal")]
+        public async Task<IActionResult> DetalhesFichaTreino(string id, string fichaId)
+        {
+            // Encontre o usuário pelo ID
+            var aluno = await userManager.FindByIdAsync(id);
+
+            if (aluno == null)
+            {
+                // Se o usuário não for encontrado, redireciona para a página inicial
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Convertendo fichaId de string para Guid
+            if (!Guid.TryParse(fichaId, out var fichaGuid))
+            {
+                // Se não conseguir converter o ID da ficha, redireciona para a lista de fichas
+                return RedirectToAction("VerFichasTreino", new { id = id });
+            }
+
+            // Encontre a ficha de treino dentro da lista de FichasTreino do aluno
+            var fichaTreino = aluno.FichasTreino.FirstOrDefault(f => f.Id == fichaGuid);
+
+            if (fichaTreino == null)
+            {
+                // Se a ficha não for encontrada, redireciona para a lista de fichas
+                return RedirectToAction("VerFichasTreino", new { id = id });
+            }
+
+            // Passa a ficha de treino para a view
+            return View(fichaTreino);
+        }
+
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeletarFichaTreino(string fichaId, string usuarioId)
+        {
+            // Verifica se o ID da ficha foi fornecido
+            if (string.IsNullOrEmpty(fichaId) || string.IsNullOrEmpty(usuarioId))
+            {
+                return RedirectToAction("VerFichasTreino", new { id = usuarioId });
+            }
+
+            // Encontre o usuário pelo ID
+            var aluno = await userManager.FindByIdAsync(usuarioId);
+            if (aluno == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            // Encontre a ficha de treino dentro da lista de FichasTreino do aluno
+            var fichaTreino = aluno.FichasTreino.FirstOrDefault(f => f.Id.ToString() == fichaId);
+
+            if (fichaTreino == null)
+            {
+                // Se a ficha não for encontrada, redireciona para a lista de fichas
+                return RedirectToAction("VerFichasTreino", new { id = usuarioId });
+            }
+
+            // Remove a ficha de treino
+            aluno.FichasTreino.Remove(fichaTreino);
+
+            // Salve as alterações no banco de dados
+            var result = await userManager.UpdateAsync(aluno);
+            if (result.Succeeded)
+            {
+                // Redireciona para a página de visualização de fichas
+                return RedirectToAction("VerFichasTreino", new { id = usuarioId });
+            }
+
+            // Se algo deu errado, mostra uma mensagem de erro
+            ModelState.AddModelError("", "Erro ao excluir a ficha de treino.");
+            return RedirectToAction("VerFichasTreino", new { id = usuarioId });
+        }
+
 
     }
 }

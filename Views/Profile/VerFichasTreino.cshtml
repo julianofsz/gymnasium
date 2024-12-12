@@ -1,0 +1,79 @@
+﻿@model IEnumerable<gymnasium_academia.Models.ViewModels.FichaTreino>
+
+@{
+    ViewData["Title"] = "Minhas Fichas de Treino";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <a class="dropdown-item" asp-controller="Profile" asp-action="CriarFichaTreino">Criar nova ficha</a>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.NomeTreino)</th>
+                <th>@Html.DisplayNameFor(model => model.DataInicio)</th>
+                <th>@Html.DisplayNameFor(model => model.Observacoes)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.NomeTreino)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DataInicio)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Observacoes)</td>
+                    <td>
+                        <a href="@Url.Action("DetalhesFichaTreino", "Profile", new { id = item.UsuarioId, fichaId = item.Id.ToString() })" class="btn btn-info btn-sm">Detalhes</a>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" data-id="@item.Id" data-usuario-id="@item.UsuarioId">Excluir</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>O usuário não tem fichas de treino.</p>
+    <a href="@Url.Action("CriarFichaTreino", "Admin")" class="btn btn-primary">Criar Ficha de Treino</a>
+}
+
+<!-- Modal de Confirmação de Exclusão -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Exclusão</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir esta ficha de treino?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <form id="deleteForm" method="post" action="@Url.Action("DeletarFichaTreino", "Profile")" style="display:inline;">
+                    <input type="hidden" name="fichaId" id="fichaId" />
+                    <input type="hidden" name="usuarioId" id="usuarioId" />
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Quando o botão de excluir for clicado, armazena o id da ficha e o id do usuário para o formulário de exclusão
+        $('#confirmDeleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Botão que acionou o modal
+            var fichaId = button.data('id'); // Recupera o ID da ficha
+            var usuarioId = button.data('usuario-id'); // Recupera o ID do usuário
+
+            // Atribui o ID da ficha e do usuário aos campos ocultos do formulário
+            $('#fichaId').val(fichaId);
+            $('#usuarioId').val(usuarioId);
+        });
+    </script>
+}

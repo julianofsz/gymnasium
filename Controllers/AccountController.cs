@@ -24,7 +24,7 @@ namespace gymnasium_academia.Controllers
         }
 
         [RedirectIfAuthenticated]
-        [HttpGet("registrar")]
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
@@ -35,7 +35,7 @@ namespace gymnasium_academia.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                // Verifica se o usuário já existe no banco com base no CPF
                 var existingUser = userManager.Users.FirstOrDefault(u => u.Cpf == user.Cpf);
 
                 if (existingUser != null)
@@ -43,6 +43,12 @@ namespace gymnasium_academia.Controllers
                     ModelState.AddModelError("", "Este CPF já está cadastrado.");
                     return View(user);
                 }
+
+                // Verifica se é o primeiro usuário no sistema
+                bool isFirstUser = !userManager.Users.Any();
+
+                // Define o tipo do usuário conforme a lógica
+                var userType = isFirstUser ? TipoUsuario.Admin : TipoUsuario.Aluno;
 
                 ApplicationUser appUser = new ApplicationUser
                 {
@@ -54,14 +60,16 @@ namespace gymnasium_academia.Controllers
                     Assinante = user.Assinante,
                     DataNascimento = user.DataNascimento,
                     PhoneNumber = user.Telefone,
-                    Tipo = user.Tipo = TipoUsuario.Usuario,
+                    Tipo = userType, // Define o tipo do usuário conforme a lógica
                     SecurityStamp = Guid.NewGuid().ToString()
-
                 };
 
-                await userManager.AddToRoleAsync(appUser, TipoUsuario.Usuario.ToString());
+                // Atribui o papel correto ao usuário baseado no tipo
+                await userManager.AddToRoleAsync(appUser, userType.ToString());
 
+                // Cria o usuário no banco de dados
                 IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
+
                 if (result.Succeeded)
                 {
                     ViewBag.Message = "Usuário criado com sucesso!";
@@ -72,8 +80,10 @@ namespace gymnasium_academia.Controllers
                         ModelState.AddModelError("", error.Description);
                 }
             }
+
             return View(user);
         }
+
 
         [RedirectIfAuthenticated]
         [HttpGet]
@@ -111,7 +121,7 @@ namespace gymnasium_academia.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpGet("conta/editar")]
+        [HttpGet]
         [Authorize]
         public async Task<IActionResult> Editar()
         {
@@ -133,7 +143,7 @@ namespace gymnasium_academia.Controllers
             return View(model);
         }
 
-        [HttpPost("conta/editar")]
+        [HttpPost]
         [Authorize]
         public async Task<IActionResult> Editar(UserUpdate model)
         {
@@ -226,7 +236,7 @@ namespace gymnasium_academia.Controllers
         }
 
         [Authorize]
-        [HttpGet("conta/mudar-senha")]
+        [HttpGet]
         public IActionResult MudarSenha()
         {
             return View();
