@@ -1,0 +1,266 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\profile\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\profile\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\profile\\detalhesfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\profile\\detalhesfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\profile\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\profile\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\models\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:models\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\admin\\vertodos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\admin\\vertodos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\personal\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\personal\\criarfichatreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\admin\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\admin\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\personal\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\personal\\verfichastreino.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\account\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\account\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|c:\\users\\jufel\\onedrive\\\u00E1rea de trabalho\\gymnasium\\views\\personal\\veralunos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{37955A7D-0673-4447-9CA2-0557E89458EB}|gymnasium-academia.csproj|solutionrelative:views\\personal\\veralunos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAB8BAAAAAAAAAAAswB8BAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T13:19:42.003Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T10:41:47.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VerTodos.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Admin\\VerTodos.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\VerTodos.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Admin\\VerTodos.cshtml",
+              "RelativeToolTip": "Views\\Admin\\VerTodos.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAIBJwH0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T11:26:02.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CriarFichaTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\CriarFichaTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\CriarFichaTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\CriarFichaTreino.cshtml",
+              "RelativeToolTip": "Views\\Profile\\CriarFichaTreino.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T01:32:09.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetalhesFichaTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\DetalhesFichaTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\DetalhesFichaTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\DetalhesFichaTreino.cshtml",
+              "RelativeToolTip": "Views\\Profile\\DetalhesFichaTreino.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T11:05:32.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "VerAlunos.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\VerAlunos.cshtml",
+              "RelativeDocumentMoniker": "Views\\Personal\\VerAlunos.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\VerAlunos.cshtml",
+              "RelativeToolTip": "Views\\Personal\\VerAlunos.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T10:54:08.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VerFichasTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\VerFichasTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\VerFichasTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Profile\\VerFichasTreino.cshtml",
+              "RelativeToolTip": "Views\\Profile\\VerFichasTreino.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADgAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T01:15:13.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VerFichasTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Admin\\VerFichasTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\VerFichasTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Admin\\VerFichasTreino.cshtml",
+              "RelativeToolTip": "Views\\Admin\\VerFichasTreino.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T11:09:01.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T11:10:20.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:24:24.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAALMBAAAAAAAAAADwv70BAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-12T12:48:12.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\Identity\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Models\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\Identity\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T12:36:21.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CriarFichaTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\CriarFichaTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Personal\\CriarFichaTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\CriarFichaTreino.cshtml",
+              "RelativeToolTip": "Views\\Personal\\CriarFichaTreino.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAmwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T10:55:57.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VerFichasTreino.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\VerFichasTreino.cshtml",
+              "RelativeDocumentMoniker": "Views\\Personal\\VerFichasTreino.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Personal\\VerFichasTreino.cshtml",
+              "RelativeToolTip": "Views\\Personal\\VerFichasTreino.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAWwBAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T10:56:16.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Account\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Editar.cshtml",
+              "ToolTip": "C:\\Users\\jufel\\OneDrive\\\u00C1rea de Trabalho\\gymnasium\\Views\\Account\\Editar.cshtml",
+              "RelativeToolTip": "Views\\Account\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T11:02:33.444Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

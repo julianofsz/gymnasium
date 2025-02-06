@@ -1,0 +1,85 @@
+﻿@model gymnasium_academia.Models.ViewModels.FichaTreino
+
+@{
+    ViewData["Title"] = "Detalhes da Ficha de Treino";
+}
+
+<section class="container padrao d-flex align-item-center justify-content-center">
+
+    <h1 class="titulo-form">@ViewData["Title"]</h1>
+
+<!-- Tabs para os dias da semana -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    @foreach (var dia in Model.DiasDeTreino.OrderBy(d => d.Dia))
+    {
+        <li class="nav-item" role="presentation">
+            <a class="nav-link @(dia.Dia == Model.DiasDeTreino.First().Dia ? "active" : "")"
+               id="dia-@dia.Dia"
+               data-bs-toggle="tab"
+               href="#exercicios-@dia.Dia"
+               role="tab"
+               aria-controls="exercicios-@dia.Dia"
+               aria-selected="@(dia.Dia == Model.DiasDeTreino.First().Dia ? "true" : "false")">
+                @dia.Dia
+            </a>
+        </li>
+    }
+</ul>
+
+<!-- Conteúdo das abas -->
+<div class="tab-content" id="myTabContent">
+    @foreach (var dia in Model.DiasDeTreino.OrderBy(d => d.Dia))
+    {
+        <div class="tab-pane fade @(dia.Dia == Model.DiasDeTreino.First().Dia ? "show active" : "")"
+             id="exercicios-@dia.Dia"
+             role="tabpanel"
+             aria-labelledby="dia-@dia.Dia">
+            <h4>@dia.Dia</h4>
+            @if (dia.Exercicios.Any())
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Grupo Muscular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var exercicio in dia.Exercicios)
+                        {
+                            <tr>
+                                <td>@exercicio.Nome</td>
+                                <td>@exercicio.Series</td>
+                                <td>@exercicio.Repeticoes</td>
+                                <td>@exercicio.GrupoMuscular</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Não há exercícios cadastrados para este dia.</p>
+            }
+        </div>
+    }
+</div>
+</section>
+
+
+@section Scripts {
+    <script>
+        // Função para iniciar as abas do Bootstrap
+        var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+        triggerTabList.forEach(function (triggerEl) {
+            var tabTrigger = new bootstrap.Tab(triggerEl)
+
+            triggerEl.addEventListener('click', function (event) {
+                event.preventDefault()
+                tabTrigger.show()
+            })
+        })
+    </script>
+}

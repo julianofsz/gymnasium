@@ -1,0 +1,199 @@
+{
+  "exercicios": [
+    {
+      "nome": "Supino Reto",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício clássico para desenvolver a parte superior do peito, realizado com barra ou halteres."
+    },
+    {
+      "nome": "Supino Inclinado",
+      "grupoMuscular": "Peito Superior",
+      "descricao": "Exercício similar ao supino reto, mas com a bancada inclinada para trabalhar a parte superior do peito."
+    },
+    {
+      "nome": "Supino Declinado",
+      "grupoMuscular": "Peito Inferior",
+      "descricao": "Exercício que foca na parte inferior do peito, feito com a bancada declinada."
+    },
+    {
+      "nome": "Crucifixo",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício com halteres para trabalhar toda a região do peito, especialmente a parte externa."
+    },
+    {
+      "nome": "Flexão de Braços",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício com o peso do corpo para desenvolver o peito e tríceps."
+    },
+    {
+      "nome": "Crossover",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício de cabos para trabalhar o peito, especialmente a parte interna."
+    },
+    {
+      "nome": "Peck Deck",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício em máquina para desenvolver o peito e melhorar a definição."
+    },
+    {
+      "nome": "Chest Press",
+      "grupoMuscular": "Peito",
+      "descricao": "Exercício realizado em máquina, semelhante ao supino, para trabalhar o peito."
+    },
+    {
+      "nome": "Pullover",
+      "grupoMuscular": "Peito e Costas",
+      "descricao": "Exercício que trabalha tanto o peito quanto as costas, com o uso de barra ou halteres."
+    },
+    {
+      "nome": "Dips",
+      "grupoMuscular": "Peito e Tríceps",
+      "descricao": "Exercício de fundo de tríceps que também trabalha o peito inferior."
+    },
+    {
+      "nome": "Puxada na Frente",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício de puxada que ativa a parte superior das costas, realizado em máquina ou com barra."
+    },
+    {
+      "nome": "Remada Curvada",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício para as costas, realizado com barra ou halteres, com o tronco inclinado para frente."
+    },
+    {
+      "nome": "Pull-up",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício de tração onde você usa o próprio peso corporal para trabalhar as costas e bíceps."
+    },
+    {
+      "nome": "Remada Unilateral",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício em que você usa halteres ou barra para trabalhar as costas, focando na parte superior."
+    },
+    {
+      "nome": "Remada Baixa",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício realizado em máquina ou cabo, com foco na parte média das costas."
+    },
+    {
+      "nome": "Puxada com Pegada Fechada",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício que trabalha a parte superior das costas com uma pegada mais fechada."
+    },
+    {
+      "nome": "Deadlift",
+      "grupoMuscular": "Costas e Pernas",
+      "descricao": "Exercício para costas e pernas, realizado com barra."
+    },
+    {
+      "nome": "Face Pull",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício para a parte superior das costas e ombros, feito com cabo."
+    },
+    {
+      "nome": "Puxada na Costas",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício que trabalha as costas, principalmente os latíssimos, usando uma barra ou máquina."
+    },
+    {
+      "nome": "Pulldown com Pegada Aberta",
+      "grupoMuscular": "Costas",
+      "descricao": "Exercício de puxada em que a pegada mais aberta foca mais na parte externa das costas."
+    },
+    {
+      "nome": "Agachamento",
+      "grupoMuscular": "Pernas",
+      "descricao": "Exercício fundamental para fortalecer quadríceps, glúteos e posteriores da coxa."
+    },
+    {
+      "nome": "Leg Press",
+      "grupoMuscular": "Pernas",
+      "descricao": "Exercício que foca em quadríceps, glúteos e panturrilhas, realizado em uma máquina."
+    },
+    {
+      "nome": "Avanço (Lunge)",
+      "grupoMuscular": "Pernas",
+      "descricao": "Exercício unilateral que trabalha quadríceps e glúteos, feito com halteres ou barra."
+    },
+    {
+      "nome": "Cadeira Extensora",
+      "grupoMuscular": "Quadríceps",
+      "descricao": "Exercício isolado para trabalhar os quadríceps, realizado em máquina."
+    },
+    {
+      "nome": "Cadeira Flexora",
+      "grupoMuscular": "Posteriores de Coxa",
+      "descricao": "Exercício isolado para trabalhar os isquiotibiais, realizado em máquina."
+    },
+    {
+      "nome": "Stiff",
+      "grupoMuscular": "Posteriores de Coxa",
+      "descricao": "Exercício que foca nos isquiotibiais e glúteos, realizado com barra ou halteres."
+    },
+    {
+      "nome": "Panturrilha em Pé",
+      "grupoMuscular": "Panturrilha",
+      "descricao": "Exercício focado em trabalhar as panturrilhas, realizado em pé, com ou sem pesos."
+    },
+    {
+      "nome": "Panturrilha Sentado",
+      "grupoMuscular": "Panturrilha",
+      "descricao": "Exercício para trabalhar a panturrilha, realizado sentado em uma máquina."
+    },
+    {
+      "nome": "Glúteo Máquina",
+      "grupoMuscular": "Glúteos",
+      "descricao": "Exercício realizado em máquina que foca no desenvolvimento dos glúteos."
+    },
+    {
+      "nome": "Agachamento Búlgaro",
+      "grupoMuscular": "Pernas",
+      "descricao": "Exercício unilateral focado nos quadríceps e glúteos."
+    },
+    {
+      "nome": "Rosca Direta",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício que visa aumentar o volume e força dos bíceps, realizado com barra ou halteres."
+    },
+    {
+      "nome": "Rosca Alternada",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício unilateral para os bíceps, feito com halteres."
+    },
+    {
+      "nome": "Rosca Scott",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício feito em máquina ou banco Scott para isolar os bíceps."
+    },
+    {
+      "nome": "Rosca Concentrada",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício isolado para bíceps, realizado com halteres, sentado."
+    },
+    {
+      "nome": "Rosca Martelo",
+      "grupoMuscular": "Bíceps e Antebraço",
+      "descricao": "Exercício com halteres que trabalha tanto os bíceps quanto os músculos do antebraço."
+    },
+    {
+      "nome": "Rosca 21",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício que envolve 3 diferentes movimentos de rosca para estimular o bíceps."
+    },
+    {
+      "nome": "Rosca com Pegada Invertida",
+      "grupoMuscular": "Bíceps e Antebraço",
+      "descricao": "Exercício realizado com pegada supinada para focar tanto nos bíceps quanto nos antebraços."
+    },
+    {
+      "nome": "Rosca com Corda no Cabo",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício de rosca realizado em cabo com uma corda, enfatizando a contração total."
+    },
+    {
+      "nome": "Rosca de Pulley",
+      "grupoMuscular": "Bíceps",
+      "descricao": "Exercício feito com o uso de polia, ideal para trabalhar os bíceps."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+﻿@model gymnasium_academia.Models.Identity.ApplicationUser
+
+<section class="container-fluid padrao detalhes-usuario d-flex align-item-center justify-content-center">
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Detalhes do Usuário</h2>
+            </div>
+        </div>
+        
+    <h4 class="mt-5 mb-1 d-flex gap-3 align-item-center text-center justify-content-start detalhes-padrao">
+        <div class="titulo-form detalhes-da-conta">Detalhes da conta:</div>
+        <div class="titulo-form">
+            @if (!string.IsNullOrEmpty(Model.NomeCompleto))
+        {
+            var firstName = Model.NomeCompleto.Split(' ').FirstOrDefault();
+            @firstName
+        }
+        </div>
+    </h4>
+
+    <div class="container p-0">
+        <!-- Detalhes do Usuário -->
+        <div class="col-md-12 d-flex ga">
+            <div class="card mb-4 card-shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Informações Pessoais</h5>
+                    <p><strong>Nome Completo:</strong> @Model.NomeCompleto</p>
+                    <p><strong>Email:</strong> @Model.Email</p>
+                    <p><strong>CPF:</strong> @Model.Cpf</p>
+                    <p><strong>Telefone:</strong> @Model.PhoneNumber</p>
+                    <p><strong>Idade:</strong> @Model.Idade anos</p>
+                </div>
+            </div>
+            <!-- Informações de Assinatura -->
+            <div class="card mb-4 card-shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Status da Assinatura</h5>
+                    <p><strong>Status:</strong> <span class="@("Ativa" == "Ativa" ? "text-success" : "text-danger")">Ativa</span></p>
+                    <p><strong>Tipo de Plano:</strong> Anual</p>
+                    <p><strong>Próxima Renovação:</strong> 11/07/2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-2 detalhes-padrao d-flex justify-content-start gap-2">
+        <a asp-action="Editar" asp-route-id="@Model.Id" class="btn btn-warning">Editar Usuário</a>
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
+          Excluir Usuário
+        </button>
+        @* <a asp-action="Excluir" asp-route-id="@Model.Id" class="btn btn-danger">Excluir Usuário</a> *@
+        <a asp-action="VerTodos" class="btn btn-secondary">Voltar</a>
+    </div>
+</section>
+
+
+
+        <!-- Modal de Confirmação -->
+        <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmDeleteLabel">Confirmação de Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza que deseja excluir este usuário?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <form asp-action="Excluir" asp-route-id="@Model.Id" method="post" style="display: inline;">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

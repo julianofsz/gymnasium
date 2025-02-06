@@ -1,0 +1,129 @@
+﻿@model IEnumerable<(gymnasium_academia.Models.Identity.ApplicationUser User, IList<string> Roles)>
+
+<!-- Container para alinhar e dar espaçamento à página -->
+<section class="container padrao d-flex align-items-center justify-content-center verTodos">
+
+
+    <!-- Tabela de usuários -->
+    <table class="table table-bordered table-hover" id="userTable">
+
+        <div class="titulo-form mb-5">Gerenciar Usúarios</div>
+
+        <div class="input-group mb-2">
+            <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar por nome..." onkeyup="searchTable()" />
+        </div>
+
+        <thead class="thead-light">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.User.NomeCompleto)</td>
+                    <td>@Html.DisplayFor(modelItem => item.User.Email)</td>
+                    <td>
+                        <select class="form-control" onchange="showConfirmationModal(this, '@item.User.Id')">
+                            @foreach (var role in Enum.GetNames(typeof(TipoUsuario)))
+                            {
+                                var isSelected = item.Roles.Contains(role);
+                                <option value="@role" selected="@(isSelected ? "selected" : null)">@role</option>
+                            }
+                        </select>
+                    </td>
+
+                    <td>
+                        <a asp-action="Detalhes" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Detalhes</a>
+                        <a asp-controller="Admin" asp-action="ExibirFichaAluno" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Ficha de Aluno</a>
+                        <a asp-controller="Admin" asp-action="CriarFichaTreino" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Criar Ficha de Treino</a>
+                        <a asp-controller="Admin" asp-action="VerFichasTreino" asp-route-id="@item.User.Id" class="btn btn-sm btn-info">Fichas de Treino</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <div class="verTodos-btn-content mb-2">
+            <a asp-action="CriarUsuario" class="btn btn-sm btn-estilo verTodos-btn">Cadastrar novo usuario</a>
+        </div>
+    </table>
+</section>
+
+<!-- Modal de Confirmação -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Confirmar Alteração</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja alterar a permissão deste usuário?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="confirmButton">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("userTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Filtra pelo nome (primeira coluna)
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        // Variável global para armazenar o ID do usuário selecionado
+        let selectedUserId = null;
+
+        // Função para mostrar o modal de confirmação
+        function showConfirmationModal(selectElement, userId) {
+            selectedUserId = userId;
+            $('#confirmationModal').modal('show');
+
+            $('#confirmButton').off('click').on('click', function () {
+                var newRole = selectElement.value;
+                updateUserRole(selectedUserId, newRole);
+                $('#confirmationModal').modal('hide');
+            });
+        }
+
+        // Função para atualizar a role do usuário via AJAX
+        async function updateUserRole(userId, newRole) {
+            const response = await fetch(`/admin/update-role/${userId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ role: newRole }),
+            });
+
+            if (!response.ok) {
+                alert('Erro ao atualizar a role.');
+            }
+            alert('Sucesso ao atualizar a role.');
+        }
+    </script>
+}

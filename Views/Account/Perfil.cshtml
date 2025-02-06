@@ -1,0 +1,81 @@
+﻿@model gymnasium_academia.Models.Identity.ApplicationUser
+@{
+    ViewData["Title"] = "Meu Perfil";
+}
+
+<section class="container padrao d-flex align-item-center justify-content-center">
+
+    <!-- Início do Conteúdo Principal -->
+    <div class="row">
+        <!-- Coluna Principal (Informações do Usuário) -->
+        <div class="col-md-12 p-0">
+            <div class="card shadow-sm">
+                <div class="card-body p-0 perfil-cs">
+                    <div class="d-flex align-items-center">
+                        <!-- Foto de Perfil -->
+                        <div class="profile-picture bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; font-size: 2rem;">
+                            N
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="mb-1">
+                                @if (!string.IsNullOrEmpty(Model.NomeCompleto))
+                                {
+                                    var firstName = Model.NomeCompleto.Split(' ').FirstOrDefault();
+                                    @firstName
+                                }
+                            </h4>
+                            <p class="mb-0 text-muted">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <span>Admin</span>
+                                }
+                                else if (User.IsInRole("Usuario"))
+                                {
+                                    <span>Usuario</span>
+                                }
+                                else if (User.IsInRole("Aluno"))
+                                {
+                                    <span>Aluno</span>
+                                }
+                                else if (User.IsInRole("Personal"))
+                                {
+                                    <span>Personal</span>
+                                }
+                            </p>
+                            <a href="#" class="text-primary">Editar foto</a>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Navegação Horizontal -->
+                    <div class="mt-4 mb-4">
+                        <div class="d-flex justify-content-start gap-3">
+                            <a asp-action="HistoricoDePedido" asp-controller="Profile" class="btn btn-outline-primary">Histórico de Assinatura</a>
+                            <a asp-action="Detalhes" asp-controller="FichaAluno" class="btn btn-outline-primary">Ficha do Aluno</a>
+                            <a asp-action="Editar" class="btn btn-outline-primary">Alterar</a>
+                        </div>
+                    </div>
+
+                    <!-- Detalhes do Usuário -->
+                    <div class="mt-4">
+                        <h5 class="mb-3">Detalhes do Usuário</h5>
+                        <p><strong>Nome:</strong> @Html.DisplayFor(model => model.NomeCompleto)</p>
+                        <p><strong>Email:</strong> @Html.DisplayFor(model => model.Email)</p>
+                        <p><strong>CPF:</strong> @Html.DisplayFor(model => model.Cpf)</p>
+                        <p><strong>Telefone:</strong> @Html.DisplayFor(model => model.PhoneNumber)</p>
+                        <p><strong>Idade:</strong> @Html.DisplayFor(model => model.Idade) anos</p>
+                    </div>
+
+                    <!-- Status da Assinatura -->
+                    <div class="mt-4">
+                        <h5 class="mb-3">Status da Assinatura</h5>
+                        <p><strong>Assinatura:</strong> <span class="text-success">Ativa</span></p>
+                        <p><strong>Tipo de plano:</strong> Anual</p>
+                        <p><strong>Próxima renovação:</strong> 11/07/2025</p>
+                    </div>
+                    <a asp-action="Logout" class="btn btn-outline-danger">Sair</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Conteúdo Principal -->
+</section>

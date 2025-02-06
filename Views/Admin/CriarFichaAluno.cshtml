@@ -1,0 +1,115 @@
+﻿@model gymnasium_academia.Models.ViewModels.FichaAluno
+
+@{
+    ViewData["Title"] = "Criar Ficha do Aluno";
+}
+
+<section class="container-fluid padrao d-flex align-items-center justify-content-center">
+
+    <h2 class="titulo-form">Criar Ficha do Aluno</h2>
+
+    <form asp-action="CriarFichaAluno" method="post" class="form-criar-ficha">
+        <!-- Dados Pessoais -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Dados Pessoais</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="form-group mb-2">
+                        <label for="EstadoCivil">Estado Civil</label>
+                        <select asp-for="EstadoCivil" class="form-control" id="EstadoCivil" required>
+                            <option value="">Selecione o Estado Civil</option>
+                            @foreach (var estadoCivil in Enum.GetValues(typeof(gymnasium_academia.Models.ViewModels.EstadoCivil)))
+                            {
+                                <option value="@estadoCivil">@estadoCivil</option>
+                            }
+                        </select>
+                        <span asp-validation-for="EstadoCivil" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="TemAnamnese">Possui Anamnese</label>
+                        <input type="checkbox" id="TemAnamnese" name="TemAnamnese" @(Model.TemAnamnese ? "checked" : "") />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Endereço -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Endereço</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="Endereco_Cep">CEP</label>
+                        <input type="text" class="form-control" id="Endereco_Cep" name="Endereco.Cep" value="@Model.Endereco?.Cep" required onblur="buscarCep()" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="Endereco_Logradouro">Logradouro</label>
+                        <input type="text" class="form-control" id="Endereco_Logradouro" name="Endereco.Logradouro" value="@Model.Endereco?.Logradouro" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Endereco_Numero">Número</label>
+                        <input type="text" class="form-control" id="Endereco_Numero" name="Endereco.Numero" value="@Model.Endereco?.Numero" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="Endereco_Complemento">Complemento (Opcional)</label>
+                        <input type="text" class="form-control" id="Endereco_Complemento" name="Endereco.Complemento" value="@Model.Endereco?.Complemento" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Endereco_Bairro">Bairro</label>
+                        <input type="text" class="form-control" id="Endereco_Bairro" name="Endereco.Bairro" value="@Model.Endereco?.Bairro" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="Endereco_Cidade">Cidade</label>
+                        <input type="text" class="form-control" id="Endereco_Cidade" name="Endereco.Cidade" value="@Model.Endereco?.Cidade" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Endereco_Estado">Estado</label>
+                        <input type="text" class="form-control" id="Endereco_Estado" name="Endereco.Estado" value="@Model.Endereco?.Estado" required />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-4">Salvar Ficha</button>
+    </form>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function buscarCep() {
+        var cep = $('#Endereco_Cep').val().replace(/\D/g, '');
+
+        if (cep.length === 8) {
+            $.ajax({
+                url: `https://viacep.com.br/ws/${cep}/json/`,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (!data.erro) {
+                        $('#Endereco_Logradouro').val(data.logradouro);
+                        $('#Endereco_Bairro').val(data.bairro);
+                        $('#Endereco_Cidade').val(data.localidade);
+                        $('#Endereco_Estado').val(data.uf);
+                    } else {
+                        alert('CEP não encontrado.');
+                    }
+                },
+                error: function () {
+                    alert('Erro ao consultar o CEP.');
+                }
+            });
+        } else {
+            alert('Por favor, insira um CEP válido.');
+        }
+    }
+</script>

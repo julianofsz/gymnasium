@@ -1,0 +1,17 @@
+﻿@model IEnumerable<gymnasium_academia.Models.Identity.ApplicationUser>
+
+@if (Model.Any())
+{
+    <ul class="list-group">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item" style="cursor: pointer;" onclick="selectEmail('@item.Email')">
+                @item.Email
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nenhum aluno encontrado.</p>
+}

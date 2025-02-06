@@ -1,0 +1,107 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Criar Usuário";
+}
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+
+<section class="container-fluid padrao register-section d-flex align-items-center justify-content-center">
+    <h4 class="titulo-form">Cadastrar Aluno</h4>
+    <form asp-action="CriarUsuario" method="post" id="form-registro" class="form-auth">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-1">
+            <label asp-for="NomeCompleto" class="form-label">Nome completo</label>
+            <input asp-for="NomeCompleto" class="form-control" placeholder="Digite o nome completo">
+            <span asp-validation-for="NomeCompleto" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Telefone" class="form-label">Telefone</label>
+            <input asp-for="Telefone" class="form-control" id="telefone" placeholder="Digite o telefone do aluno">
+            <span asp-validation-for="Telefone" class="text-danger"></span>
+        </div>
+
+        <div class="mb-1">
+            <label asp-for="Email" class="form-label">E-mail</label>
+            <input asp-for="Email" class="form-control" placeholder="Digite o e-mail">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Senha</label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Digite uma senha">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword" class="form-label">Confirmar Senha</label>
+            <input asp-for="ConfirmPassword" class="form-control" type="password" placeholder="Confirme a senha">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Cpf" class="form-label">CPF</label>
+            <input asp-for="Cpf" class="form-control" id="cpf" placeholder="Digite o CPF do aluno">
+            <span asp-validation-for="Cpf" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DataNascimento" class="form-label">Data de Nascimento</label>
+            <input asp-for="DataNascimento" class="form-control" placeholder="Data de nascimento">
+            <span asp-validation-for="DataNascimento" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Tipo" class="form-label">Papel</label>
+            <!-- Aqui associamos a propriedade Tipo do modelo -->
+            <select asp-for="Tipo" class="form-select">
+                <option value="">Selecione um papel</option>
+                <!-- Usamos Html.GetEnumSelectList para listar os tipos de usuário -->
+                @foreach (var tipo in Enum.GetValues(typeof(TipoUsuario)).Cast<TipoUsuario>())
+                {
+                    <option value="@tipo">@tipo.ToString()</option>
+                }
+            </select>
+            <span asp-validation-for="Tipo" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-estilo w-100">Cadastrar</button>
+
+        <div class="mb-3 crie-uma-conta d-flex mt-3">
+            <p class="text-muted">Já tem uma conta?</p>
+            <a class="voltar-login-link" asp-action="VerTodos">Voltar</a>
+        </div>
+    </form>
+</section>
+
+@section Scripts {
+    <script>
+        // Máscara CPF
+        document.getElementById('cpf').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, '');
+            if (v.length > 11) v = v.slice(0, 11);
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            e.target.value = v;
+        });
+
+        // Máscara Telefone
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, '');
+            if (v.length > 11) v = v.slice(0, 11);
+            v = v.replace(/^(\d{2})(\d)/g, '($1) $2');
+            v = v.replace(/(\d{5})(\d)/, '$1-$2');
+            e.target.value = v;
+        });
+    </script>
+}
